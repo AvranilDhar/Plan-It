@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --red:#ff0000;
+    --green:#0ab72c;
+    --blue1:#6d88e1;
+    --blue2:#6dafdf;
+    --blue3:#83d8db;
+    --blue4:#afeee5;
+    --blue5:#0080ff;
+    --yellow:#ecedb1;
+    --white:#ffffff;
+    --grey:#d5d8dc ;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    font-family: "Roboto";
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: var(--grey);
+}
+header{
+    height: 100px;
+    width: 100vw;
+    position:absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.7rem,calc());
+}
+.container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 25px;
+}
+#task-input{
+    height: 60px;
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 0px 30px;
+    
+}
+#task-input-btn{
+    color: var(--white);
+    height: 60px;
+    width: 110px;
+    border: none;
+    background-color: var(--blue5);
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: large;
+}
+#task-list{
+    height: 70vh;
+    width: 85vw;
+    border-radius: 30px;
+    background: var(--white);
+}
