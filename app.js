@@ -1,21 +1,26 @@
-const taskForm = document.querySelector('form');
-const taskInput = document.getElementById("task-input");
-const taskInputBtn = document.getElementById("task-input-btn");
-const taskListCheckbox = document.getElementById('task-list-checkbox');
+const form = document.querySelector('form');
+const textInput = document.getElementById('text-input');
+const listContainer = document.getElementById('list-container');
 
-const taskText = document.querySelector("li p");
+let tasks = [];
 
-taskForm.addEventListener('submit',(event)=>{
+form.addEventListener('submit',(event)=>{
     event.preventDefault();
-    if(taskInput.value === ""){
-        alert("Plese Write Something To add");
+    if(textInput.value === ""){
+        alert("Please Write something to add..");
     }
     else{
-        addTask(taskInput.value.trim());
-        taskInput.value = "";
+        const li = document.createElement('li');
+        const check = document.createElement('input');
+        check.type="checkbox";
+        const span = document.createElement('span');
+        span.textContent = textInput.value.trim();
+        const del = document.createElement('button');
+        del.innerHTML= 'Del';
+        li.appendChild(check);
+        li.appendChild(span);
+        li.appendChild(del);
+        listContainer.appendChild(li);
     }
+    textInput.value = "";
 })
-
-function addTask(task){
-    taskText.innerHTML = task;
-}
